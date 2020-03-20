@@ -1,0 +1,18 @@
+# Need to find a dataset with appropriate CRS
+
+# data("wolfcamp")
+# df <- as.data.frame(cbind(wolfcamp$coords, wolfcamp$data))
+# names(df) <- c("x","y","count")
+# coordinates(df) <- c("x", "y")
+# variog_fit <- fit.variog(df)
+# plot(df)
+# e <- locator()
+# extent <- extent(c(e$x[1], e$x[2]), c(e$y[1], e$y[2]))
+# b1 <- locator() 
+# b2 <- locator()
+# p1 <- Polygon(b1)
+# p2 <- Polygon(b2, hole=T)
+# ps <- Polygons(list(p1,p2), ID="samp")
+# sp <- SpatialPolygons(list(ps))
+# plot(sp)
+# crop.sample.area(extent, sp, 100)
