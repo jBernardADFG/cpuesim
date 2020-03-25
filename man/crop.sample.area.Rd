@@ -4,7 +4,7 @@
 \alias{crop.sample.area}
 \title{To determine which points are in the sampling area}
 \usage{
-crop.sample.area(extent, sp, dist)
+crop.sample.area(extent, sp, dist, units)
 }
 \arguments{
 \item{sp}{A SpatialPolygons representation of the section of the lake that can be sampled}

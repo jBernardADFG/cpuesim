@@ -1,16 +1,18 @@
 Package: cpuesim
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: cpuesim
+Version: 0.0
 Date: 2020-03-19
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Jordy Bernard
+Maintainer: Complain to <jordy.bernard@alaska.gov>
+Description: Simulate spatially coorelated cpue data over a sampling area; Compare different sampling designs, cpue estimators, and cpue expanded abundance estimators
+License: MIT
 RoxygenNote: 7.0.2
 Imports:
   sp,
   raster,
   gstat,
   prevR,
-  geosphere
+  geosphere,
+  purrr
+

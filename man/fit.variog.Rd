@@ -4,7 +4,7 @@
 \alias{fit.variog}
 \title{To estimate the degree of spatial autocoorelation in cpue count data using an exponential variogram}
 \usage{
-fit.variog(count_data)
+fit.variog(count_data, cutoff)
 }
 \arguments{
 \item{count_data}{A SpatialPointsDataFrame storing the cpue data}

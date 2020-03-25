@@ -2,8 +2,9 @@
 #' 
 #' @param count_data A SpatialPointsDataFrame storing the cpue data
 #' @return Returns a vector containing estimates of the nugget, partial sill, and range parameter respectively
-fit.variog <- function(count_data){
-  v <- variogram(count~1, count_data)
+fit.variog <- function(count_data, cutoff){
+  count_data <- ct_dt
+  v <- variogram(count~1, count_data, cutoff=1000)
   v_fit <- fit.variogram(v, model = vgm("Exp"))
   nug <- v_fit$psill[1]
   p_sill <- v_fit$psill[2]

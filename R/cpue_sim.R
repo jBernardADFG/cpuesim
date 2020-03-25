@@ -10,11 +10,11 @@
 #' @param n_max For local kriging -- he number of nearest observations that should be used for kriging simulation. see help(gstat)
 #' @return Returns a data.frame containing the coordinate locations simulated cpue values
 #' @export
-
 cpue.sim <- function(N, sim_locs, variog_fit, q_bar, sd_q, n_sim, A, n_max=100){
   q <- rnorm(n_sim, q_hat, q_bar)
   cpue <- N/A*q
   gs <- gstat(formula=z~1, locations=~x+y, dummy=T, beta=cpue, model=vgm(nugget=variog_fit[1], psill=variog_fit[2], range=variog_fit[3], model='Exp'), nmax=n_max)
   yy <- predict(gs, newdata=sim_locs, nsim=n_sim)
+  yy[,3:ncol(yy)] <- round(yy[,3:ncol(yy)]) 
   return(yy)
 }
